@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="userLoginPageStyles.css" rel="Stylesheet" />
+    <title>Login Card</title>
+  </head>
+  <body>
+    <div class="login-card">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="forgot-password">
+          <a href="/forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <script>
+      const toggleButton = document.createElement("button");
+      toggleButton.textContent = "Color Mode";
+      document.body.appendChild(toggleButton);
+
+      toggleButton.addEventListener("click", () => {
+        document.documentElement.dataset.theme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      });
+    </script>
+  </body>
+</html>
