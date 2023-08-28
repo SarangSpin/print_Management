@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in example • Pico.css</title>
+  <meta name="description" content="A minimalist layout for Login pages. Built with Pico CSS." />
+  <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+  <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
+
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+  <!-- Custom styles for this example -->
+  <link rel="stylesheet" href="custom.css" />
+
+  <style>
+    /* Grid */
+body>main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 7rem);
+  padding: 1rem 0;
+}
+
+@keyframes animate {
+  0%, 100% {
+    clip-path: polygon(
+      0% 30%, /* Push the bottom points higher to reduce water drop */
+      16% 20%,
+      33% 20%,
+      54% 20%,
+      70% 20%,
+      84% 20%,
+      100% 20%,
+      100% 100%,
+      0% 100%
+    );
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 40%, /* Push the bottom points higher */
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+    background-image: none;
+    color: #03a9f4;
+  }
+}
+
+.animate-character h1 {
+  display: inline-block;
+  animation: animate 4s ease-in-out infinite;
+}
+
+/* Custom styling for form components */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Custom styling for Charvi Global Tech */
+.container-fluid ul:first-child li:first-child a {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+article {
+  padding: 0;
+  overflow: hidden;
+}
+
+article div {
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  body>main {
+    padding: 1.25rem 0;
+  }
+
+  article div {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body>main {
+    padding: 1.5rem 0;
+  }
+
+  article div {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  body>main {
+    padding: 1.75rem 0;
+  }
+
+  article div {
+    padding: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body>main {
+    padding: 2rem 0;
+  }
+
+  article div {
+    padding: 2rem;
+  }
+}
+
+/* Nav */
+summary[role="link"].secondary:is([aria-current], :hover, :active, :focus) {
+  background-color: transparent;
+  color: var(--secondary-hover);
+}
+
+/* Hero Image */
+article div:nth-of-type(2) {
+  display: none;
+  background-color: #374956;
+  background-image: url("img/alessio-soggetti-8jeWeKdygfk-unsplash-1000x1200.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .grid>div:nth-of-type(2) {
+    display: block;
+  }
+}
+
+/* Footer */
+body>footer {
+  padding: 1rem 0;
+}
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <a href="./" class="contrast" onclick="event.preventDefault()">
+          <span style="font-family: 'Times New Roman', Times, serif; font-size: smaller;">Charvi Global Tech</span>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link" class="secondary">Theme</summary>
+          <ul role="listbox">
+            <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link" class="secondary">Examples (v1)</summary>
+          <ul role="listbox">
+            <li><a href="../v1-preview/">Preview</a></li>
+              <li><a href="../v1-preview-rtl/">Right-to-left</a></li>
+              <li><a href="../v1-classless/">Classless</a></li>
+              <li><a href="../v1-basic-template/">Basic template</a></li>
+              <li><a href="../v1-company/">Company</a></li>
+              <li><a href="../v1-google-amp/">Google Amp</a></li>
+              <li><a href="../v1-sign-in/">Sign in</a></li>
+              <li><a href="../v1-bootstrap-grid/">Bootstrap grid</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+  <!-- ./ Nav -->
+
+  <!-- Main -->
+  <main class="container">
+    <article class="grid">
+      <hgroup class="animate-character">
+        <h1>Sign in</h1>
+        <h2></h2>
+      </hgroup>
+
+      <form>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="remember">
+            <input type="checkbox" id="remember" name="remember">
+            Remember me
+          </label>
+        </div>
+        <button type="submit" class="contrast" onclick="event.preventDefault()">Login</button>
+      </form>
+    </article>
+  </main>
+  <!-- ./ Main -->
+
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <small>Built with <a href="https://picocss.com" class="secondary">Pico</a> •
+      <a href="https://github.com/picocss/examples/tree/master/v1-sign-in/" class="secondary">Source code</a></small>
+  </footer>
+  <!-- ./ Footer -->
+
+  <!-- Minimal theme switcher -->
+  <script src="js/minimal-theme-switcher.js"></script>
+</body>
+</html>

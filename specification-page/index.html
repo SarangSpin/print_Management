@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Specifications • Pico.css</title>
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
+    <link rel="canonical" href="https://picocss.com/examples/specifications/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <!-- Include the merged theme switcher script -->
+    
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="./" class="contrast" onclick="event.preventDefault()"><strong>Charvi</strong></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <details role="list" dir="rtl">
+                    <summary aria-haspopup="listbox" role="link" class="secondary">Theme</summary>
+                    <ul role="listbox">
+                        <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                        <li><a href="#" data-theme-switcher="light">Light</a></li>
+                        <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details role="list" dir="rtl">
+                    <summary aria-haspopup="listbox" role="link" class="secondary">Examples (v1)</summary>
+                    <ul role="listbox">
+                        <li><a href="../v1-preview/">Preview</a></li>
+                        <li><a href="../v1-preview-rtl/">Right-to-left</a></li>
+                        <li><a href="../v1-classless/">Classless</a></li>
+                        <li><a href="../v1-basic-template/">Basic template</a></li>
+                        <li><a href="../v1-company/">Company</a></li>
+                        <li><a href="../v1-google-amp/">Google Amp</a></li>
+                        <li><a href="../v1-sign-in/">Sign in</a></li>
+                        <li><a href="../v1-bootstrap-grid/">Bootstrap grid</a></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <article class="grid">
+            <div>
+                <hgroup class="animate-character">
+                    <h1>Specifications</h1>
+                    <h2>Select Color and Size</h2>
+                </hgroup>
+                <form id="specifications-form">
+                    <h3>Color</h3>
+                    <label>
+                        <input type="radio" name="color" value="color" checked>
+                        Color
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="bw">
+                        Black & White
+                    </label>
+                    
+                    
+
+                    <h3>Size</h3>
+                    <label>
+                        <input type="radio" name="size" value="a4" checked>
+                        A4
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="a3">
+                        A3
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="a2">
+                        A2
+                    </label>
+                    <br>
+
+                    <button type="submit" class="contrast">Proceed</button>
+                </form>
+            </div>
+            <div class="dummy-image">
+                <div class="dummy-preview" id="dummy-preview"></div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="container-fluid">
+        <small>Built with <a href="https://picocss.com" class="secondary">Pico</a> • <a href="#" class="secondary">Source code</a></small>
+    </footer>
+    <script src="js/minimal-theme-switcher.js"></script>
+</body>
+</html>
